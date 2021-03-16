@@ -119,3 +119,18 @@ jobs:
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml 
       env:
         GITHUB_TOKEN: ${{ github.token }}
+
+  docker:
+    name: Publish - Docker Hub
+    runs-on: ubuntu-18.04
+    needs: War
+    env:
+      REPO: ${{ secrets.DOCKER_REPO }}
+    steps:
+    - uses: actions/checkout@v1
+    - name: Login to Docker Hub
+      run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
+    - name: Build Docker image
+      run: docker build -t $REPO:latest -t $REPO:${GITHUB_SHA::8} .
+    - name: Publish Docker image
+      run: docker push $REPO
