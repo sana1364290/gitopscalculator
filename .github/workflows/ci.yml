@@ -151,5 +151,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_TOKEN }}
           registry: docker.pkg.github.com
-          repository: nidayra/gitopscalculator/latest
+          repository: nidaap/gitopscalculator/gitopscalculator-latest
           tag_with_ref: true
