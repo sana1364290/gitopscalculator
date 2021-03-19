@@ -7,7 +7,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>gitopscalculator</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<name>gitopscalculator Maven Webapp</name>
@@ -15,11 +15,10 @@
 	<url>http://www.example.com</url>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 
-
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.projectKey>NidaAP_gitopscalculator2</sonar.projectKey>
 		<sonar.organization>nidaap</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -31,7 +30,7 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
-			<scope>test</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -43,15 +42,11 @@
 
 	<build>
 		<finalName>gitopscalculator</finalName>
-		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
-				defaults (may be moved to parent pom) -->
+		
 			<plugins>
-				
+			
 				<plugin>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.0</version>
-				</plugin>
-				<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<configuration>
 					<includes>
@@ -60,20 +55,22 @@
 					</configuration>
 				</plugin>
 				<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
 					<version>3.2.2</version>
+					<configuration>
+					<archive>
+					<manifestEntries>
+					<version>${project.version}</version>
+					</manifestEntries>
+					</archive>
+					</configuration>
 				</plugin>
-				
-				<plugin>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.8.2</version>
-				</plugin>
-
-
-				<plugin>
+		
+						<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>0.8.6</version>
+					<version>0.8.5</version>
 					<executions>
 						<execution>
 							<id>default-prepare-agent</id>
@@ -103,7 +100,7 @@
 											<limit>
 												<counter>COMPLEXITY</counter>
 												<value>COVEREDRATIO</value>
-												<minimum>0</minimum>
+												<minimum>0.03</minimum>
 											</limit>
 											-->
 										</limits>
@@ -114,7 +111,6 @@
 					</executions>
 				</plugin>
 			</plugins>
-		</pluginManagement>
 	</build>
 
 	<distributionManagement>
