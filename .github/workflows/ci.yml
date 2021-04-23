@@ -126,3 +126,33 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
+  docker:
+    name: Publish - Docker Hub
+    needs: War
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASS }}
+          repository: ${{ secrets.DOCKER_REPO }}
+          tag_with_ref: true
+
+  PushDockerImage_GitHubPackages:
+    name: Push Docker image to GitHub Packages
+    needs: docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v2
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GH_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: nidaap/gitopscalculator/gitopscalculator-latest
+          tag_with_ref: true
