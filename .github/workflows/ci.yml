@@ -138,7 +138,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASS }}
-          repository: ${{ secrets.DOCKER_REPO }}
+          repository: nidayra/gitopscalculator
           tag_with_ref: true
 
   PushDockerImage_GitHubPackages:
