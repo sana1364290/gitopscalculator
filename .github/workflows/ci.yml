@@ -4,7 +4,7 @@
 name: CI - Pipeline
 
 on:
-  push:
+  commit:
     branches: [ master ]
     tags:
       - v*
