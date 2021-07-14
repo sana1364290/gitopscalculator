@@ -156,3 +156,5 @@ jobs:
           registry: docker.pkg.github.com
           repository: nidaap/gitopscalculator/gitopscalculator-latest
           tag_with_ref: true
+          
+          
