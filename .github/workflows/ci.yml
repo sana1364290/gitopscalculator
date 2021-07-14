@@ -3,11 +3,7 @@
 
 name: CI - Pipeline
 
-on:
-  commit:
-    branches: [ master ]
-    tags:
-      - v*
+
 env:
   IMAGE_NAME: image
 
