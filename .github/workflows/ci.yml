@@ -3,15 +3,13 @@
 
 name: CI - Pipeline
 on: 
-  #schedule:
-    #- cron: '2 * * * *'
  push:
     branches: [ master ]
- #   tags:
-  #    - v*
+    tags:
+      - v*
 
-#env:
- # IMAGE_NAME: image
+env:
+ IMAGE_NAME: image
 
 jobs:
   Setup:
