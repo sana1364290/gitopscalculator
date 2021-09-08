@@ -22,7 +22,6 @@ jobs:
         java-version: 1.8
     - name: Maven - Clean Job
       run: mvn -B clean --file pom.xml
-
   Compile:
     runs-on: ubuntu-latest
     needs: Setup
