@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Simple Calculator</title>
+
 <body bgcolor="white">
 <form method="get" action="./CalcServlet">
 
@@ -24,3 +25,8 @@
 </form>
 </body>
 </html>
+<<<<<<< HEAD
+=======
+© 2021 GitHub, Inc.
+T
+>>>>>>> branch 'master' of https://github.com/NidaAP/gitopscalculator.git
