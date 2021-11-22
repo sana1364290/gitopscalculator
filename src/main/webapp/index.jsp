@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Sample Calculator</title>
+<title>Simple Calculator</title>
 <body bgcolor="white">
 <form method="get" action="./CalcServlet">
 
@@ -24,5 +24,3 @@
 </form>
 </body>
 </html>
-© 2021 GitHub, Inc.
-T
