@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Simple Calculator</title>
+<title>Simple Calculator Application</title>
 
 <body bgcolor="white">
 <form method="get" action="./CalcServlet">
