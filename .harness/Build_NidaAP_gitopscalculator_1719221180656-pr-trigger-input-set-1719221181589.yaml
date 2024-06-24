@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_NidaAP_gitopscalculator_1719221180656-pr-trigger-input-set
+  identifier: Build_NidaAP_gitopscalculator_1719221180656prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: harnessdevopspoc
+  pipeline:
+    identifier: Build_NidaAP_gitopscalculator_1719221180656
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
