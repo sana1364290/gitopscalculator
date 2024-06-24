@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_NidaAP_gitopscalculator_1719218826450-push-trigger-input-set
+  identifier: Build_NidaAP_gitopscalculator_1719218826450pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: harnessdevopspoc
+  pipeline:
+    identifier: Build_NidaAP_gitopscalculator_1719218826450
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
