@@ -1,3 +1,3 @@
 FROM tomcat
 
-COPY /workspace/target/gitopscalculator.war /usr/local/tomcat/webapps/
+COPY /harness/target/gitopscalculator.war /usr/local/tomcat/webapps/
