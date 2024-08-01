@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_NidaAP_gitopscalculator_1722500963269-pr-trigger-input-set
+  identifier: Build_NidaAP_gitopscalculator_1722500963269prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: harnessCICD_windows_connector
+  pipeline:
+    identifier: Build_NidaAP_gitopscalculator_1722500963269
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
