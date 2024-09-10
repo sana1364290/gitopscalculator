@@ -25,8 +25,4 @@
 </form>
 </body>
 </html>
-<<<<<<< HEAD
-=======
-© 2021 GitHub, Inc.
-T
->>>>>>> branch 'master' of https://github.com/NidaAP/gitopscalculator.git
+
